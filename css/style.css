@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* ========== */
+/*  CSS base */
+/* ========== */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* =================== */
+/*  Links e navegação */
+/* =================== */
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+ul{
+    margin-bottom: 0rem;
+}
+
+li{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li:hover{
+    opacity: 0.7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    margin-left: 50px;
+    margin-top: 5px;
+    z-index: 9901;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    z-index: 9900;
+    height: 100vh;
+    background: rgba(33, 33, 33, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    backdrop-filter: blur(10px);
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    margin-left: 0;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    z-index: 9901;
+}
+  
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #212121;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+    background: #fff;
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+    background: #fff;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+    background: #fff;
+}
+
+
+/* ======= */
+/*  Login */
+/* ======= */
+.wave-login {
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+
+
+.imagem-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-login img {
+    width: 300px;
+}
+
+.avatar {
+    width: 100px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario-login {
+    width: 360px;
+}
+
+.formulario-login h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: #212121;
+}
+
+.input-login {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 1rem;
+}
+
+.botao-login {
+    width: 250px;
+}
+
+.cadastrar-login {
+    color: #212121;
+    margin-top: 15px;
+}
+
+.cadastrar-login a {
+    color: rgb(83, 82, 82);
+}
+
+
+/* ========== */
+/*  Cadastro */
+/* ========== */
+.wave-cadastro {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container-cadastro {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 7rem;
+}
+
+.imagem-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-cadastro img {
+    width: 300px;
+    display: flex;
+    margin-right: 10rem;
+}
+
+.content-cadastro {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.formulario-cadastro {
+    width: 650px;
+}
+
+.botao-cadastro {
+    width: 250px;
+}
+
+
+/* ================================== */
+/*  Forms - Cadastrar e Editar setor */
+/* ================================== */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    justify-content: space-between;
+}
+
+.form-group {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 1rem;
+}
+
+
+/* ===================== */
+/*  Botão voltar página */
+/* ===================== */
+.botao-voltar {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    left: 3.5rem;
+    top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.botao-voltar img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.botao-retornar span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #212121;
+}
+
+.botao-retornar span::before{
+    content: "";
+    position: absolute;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid #212121;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+
+.botao-retornar:hover span {
+    display: flex;
+    cursor: default;
+}
+
+.botao-retornar {
+    display: flex;
+}
+
+
+/* ========================= */
+/*  Botões - Salvar e Login */
+/* ========================= */
+.custom-btn {
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.btn-3 {
+    background-color: #212121;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;  
+    margin-top: 20px;
+}
+
+.btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-3:before,
+.btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background-color: #212121;
+    transition: all 0.3s ease;
+}
+
+.btn-3:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-3:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-3:hover{
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-3:hover:before {
+    height: 100%;
+}
+
+.btn-3:hover:after {
+    width: 100%;
+}
+
+.btn-3 span:hover{
+    color: #212121;
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background-color: #212121;
+    transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-3 span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-3 span:hover:before {
+    height: 100%;
+}
+
+.btn-3 span:hover:after {
+    width: 100%;
+}
+
+
+/* ======== */
+/*  Inputs */
+/* ======== */
+
+/*Reset styles*/
+.field__input{ 
+    --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+    
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  .field__input:focus::-webkit-input-placeholder{
+    color: var(--uiFieldPlaceholderColor);
+  }
+  
+  .field__input:focus::-moz-placeholder{
+    color: var(--uiFieldPlaceholderColor);
+  }
+  
+/*Core styles*/
+.field{
+    --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+    --uiFieldPaddingRight: var(--fieldPaddingRight, 5rem);
+    --uiFieldPaddingLeft: var(--fieldPaddingLeft, 1rem);   
+    --uiFieldBorderColorActive: var(--fieldBorderColorActive, rgba(33, 33, 33, 1));
+
+    display: var(--fieldDisplay, inline-flex);
+    position: relative;
+    font-size: var(--fieldFontSize, 1rem);
+}
+  
+.field__input{
+    box-sizing: border-box;
+    width: var(--fieldWidth, 100%);
+    height: var(--fieldHeight, 3rem);
+    padding: var(--fieldPaddingTop, 1.25rem) var(--uiFieldPaddingRight) var(--fieldPaddingBottom, .5rem) var(--uiFieldPaddingLeft);
+    border-bottom: var(--uiFieldBorderWidth) solid var(--fieldBorderColor, rgba(0, 0, 0, .25));  
+}
+  
+.field__input:focus{
+    outline: none;
+}
+  
+.field__input::-webkit-input-placeholder{
+    opacity: 0;
+    transition: opacity .2s ease-out;
+}
+  
+.field__input::-moz-placeholder{
+    opacity: 0;
+    transition: opacity .2s ease-out;
+}
+  
+.field__input:focus::-webkit-input-placeholder{
+    opacity: 1;
+    transition-delay: .2s;
+}
+  
+.field__input:focus::-moz-placeholder{
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.field__label-wrap{
+    box-sizing: border-box;
+    pointer-events: none;
+    cursor: text;
+  
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+.field__label-wrap::after{
+    content: "";
+    box-sizing: border-box;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+  
+.field__input:focus ~ .field__label-wrap::after{
+    opacity: 1;
+}
+  
+.field__label{
+    position: absolute;
+    left: var(--uiFieldPaddingLeft);
+    top: calc(50% - .5em);
+  
+    line-height: 1;
+    font-size: var(--fieldHintFontSize, inherit);
+  
+    transition: top .2s cubic-bezier(0.9, -0.15, 0.1, 1.15), opacity .2s ease-out, font-size .2s ease-out;
+    will-change: bottom, opacity, font-size;
+}
+  
+.field__input:focus ~ .field__label-wrap .field__label,
+.field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{
+    --fieldHintFontSize: var(--fieldHintFontSizeFocused, .75rem);
+  
+    top: var(--fieldHintTopHover, .25rem);
+}
+
+/*effect style*/
+.field_v2 .field__label-wrap{
+    overflow: hidden;
+}
+  
+.field_v2 .field__label-wrap::after{
+    border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColorActive);
+    transform: translate3d(-105%, 0, 0);
+    will-change: transform, opacity;
+    transition: transform .285s ease-out .2s, opacity .2s ease-out .2s;
+}
+
+.field_v2 .field__input:focus ~ .field__label-wrap::after{
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0;
+}
+
+
+/* =========================== */
+/*  Waves da página principal */
+/* =========================== */
+section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../Imagens/wave-haikei.svg");
+    background-size: 150px 100px;
+}
+
+section .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+section .wave.wave2 {
+    animation: animate2 30s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: 0s;
+    bottom: 10px;
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+section .wave.wave3 {
+    animation: animate3 20s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: 0s;
+    bottom: 15px;
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+section .wave.wave4 {
+    animation: animate4 20s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: 0s;
+    bottom: 20px;
+}
+
+@keyframes animate4 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+
+/* ===================================== */
+/*  Animação escita da página principal */
+/* ===================================== */
+.bem_vindo {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid #212121;
+    max-width: fit-content;
+    margin: 10px auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animation {
+    animation: cursorMessage 900ms steps(40) infinite normal, typing 8s steps(80) normal;
+}
+
+@keyframes  cursorMessage{
+    from {
+        border-right-color: #212121;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }   
+}
+
+
+/* ======== */
+/*  Logout */
+/* ======== */
+.logout {
+    display: flex;
+    color: #212121;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.logout a{
+    color: #212121;
+}
+
+.logout_menu {
+    position: absolute;
+    margin-right: 10rem;
+    padding: 15px;
+    top: 30%;
+    right: 0;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.logout_menu.active {
+    top: 13%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.logout_menu::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: #f5f5f5;
+    transform: rotate(45deg);
+}
+
+.logout_menu img {
+    width: 20px;
+    display: flex;
+    margin-left: 7px;
+}
+
+.imagem_nav {
+    width: 50px;
+    display: flex;
+    margin-right: 10rem;
+    cursor: pointer;
+}
+
+
+/* ======== */
+/*  Tabela */
+/* ======== */
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #212121;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 18px 20px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #212121;
+}
+
+.container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem{
+    width: 24px;
+}
+
+
+/* ================================== */
+/*  Modificação do input type number */
+/* ================================== */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
